@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "ft_printf.h"
 
 int ft_printf(const char *fmt, ...)
 {
@@ -11,11 +11,15 @@ int ft_printf(const char *fmt, ...)
         {
             int c = va_arg(args, int);
             write(1, &c, 1);
+            if (*fmt == 'c')
+            {
+                
+            }
         }
         // else if(*fmt == 'd')
         // {
         //     int i = va_arg(args, int);
-        //     write(1, i, 1);
+        //     write(1, &i, 1);
         // }
         // else if(*fmt == 's')
         // {
